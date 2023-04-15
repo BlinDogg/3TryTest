@@ -1,22 +1,24 @@
-﻿<UserControl x:Class="_3TryTest.UserControl1"
+﻿<UserControl x:Class="_3TryTest.UserControlHorizon"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             mc:Ignorable="d"
-             Height="{Binding UserControlHeight}" Width="480">
-    <Grid Background="Black">
+             mc:Ignorable="d">
+    <Grid Background="Black" Height="540" Width="540">
         <Grid.Clip>
-            <EllipseGeometry RadiusY="240" Center="240, 240" RadiusX="240"/>
+            <EllipseGeometry RadiusY="270" Center="270, 270" RadiusX="270"/>
         </Grid.Clip>
 
-        <Grid HorizontalAlignment="Center" Height="960" VerticalAlignment="Top" Width="480" Margin="0,-240,0,0" x:Name="grid">
+        <Grid HorizontalAlignment="Center" Height="1080" VerticalAlignment="Top" Width="540" Margin="0,-270,0,0" x:Name="grid">
+            <Image Source="Images/linear.png" Grid.RowSpan="2" Margin="100,0,100,0" />
             <Grid.RowDefinitions>
                 <RowDefinition Height="50*" />
                 <RowDefinition Height="50*" />
             </Grid.RowDefinitions>
-
+            
+            
             <Grid.Background>
+                
                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                     <GradientStop Color="#87CEEB" Offset="0"/>
                     <GradientStop Color="#87CEEB" Offset="0.5"/>
@@ -25,10 +27,8 @@
                 </LinearGradientBrush>
             </Grid.Background>
         </Grid>
-        <Grid>
-            <Image Margin="0,125,0,496" Source="/Images/BBBB.png" Stretch="Fill"/>
-
-        </Grid>
         
+
     </Grid>
+
 </UserControl>

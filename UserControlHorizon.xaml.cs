@@ -18,10 +18,10 @@ namespace _3TryTest
     /// <summary>
     /// Логика взаимодействия для UserControl1.xaml
     /// </summary>
-    public partial class UserControl1 : UserControl
+    public partial class UserControlHorizon : UserControl
     {
         public static readonly DependencyProperty HeightMarginProperty =
-            DependencyProperty.Register("HeightMargin", typeof(double), typeof(UserControl1), new PropertyMetadata(0.0, HeightMarginChangedCallback));
+            DependencyProperty.Register("HeightMargin", typeof(double), typeof(UserControlHorizon), new PropertyMetadata(0.0, HeightMarginChangedCallback));
 
         public double HeightMargin
         {
@@ -31,12 +31,13 @@ namespace _3TryTest
 
         private static void HeightMarginChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            var control = (UserControl1)d;
+            var control = (UserControlHorizon)d;
             var newHeightMargin = (double)e.NewValue;
             control.grid.Margin = new Thickness(0, -newHeightMargin, 0, 0);
         }
 
-        public UserControl1()
+
+        public UserControlHorizon()
         {
             InitializeComponent();
 

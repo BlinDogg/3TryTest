@@ -16,16 +16,13 @@ using System.Windows.Shapes;
 namespace _3TryTest
 {
     /// <summary>
-    /// Логика взаимодействия для UserControl2.xaml
+    /// Логика взаимодействия для UserControlScaleRoll.xaml
     /// </summary>
-    public partial class UserControl2 : UserControl
+    public partial class UserControlScaleRoll : UserControl
     {
-        public UserControl2()
+        public UserControlScaleRoll()
         {
             InitializeComponent();
         }
-        
-
-        
     }
 }

@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="_3TryTest.UserControlAir"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:_3TryTest"
+             mc:Ignorable="d" 
+             d:DesignHeight="540" d:DesignWidth="540">
+    <Grid Height="487" Width="446">
+        <Image Source="Images/5PlaneBlack2.0.png" x:Name="blackImage"/>
+        <Image Source="Images/PlanePink2.0.png" Visibility="Hidden" x:Name="pinkImage"/>
+    </Grid>
+</UserControl>

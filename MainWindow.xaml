@@ -5,13 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_3TryTest" x:Class="_3TryTest.MainWindow"
         mc:Ignorable="d"
-        Title="Тестовый" Height="500" Width="500" FontSize="14">
+        Title="Тестовый" Height="580" Width="560" FontSize="14">
     <Grid>
-        
-        
-        <local:UserControl2/>
-
-
+        <local:UserControlUnion/>
 
     </Grid>
 

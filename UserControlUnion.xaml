@@ -1,14 +1,14 @@
-﻿<UserControl x:Class="_3TryTest.UserControl2"
+﻿<UserControl x:Class="_3TryTest.UserControlUnion"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:_3TryTest"
              mc:Ignorable="d" 
-             d:DesignHeight="550" d:DesignWidth="550">
+             d:DesignHeight="540" d:DesignWidth="540">
     <Grid>
-        <local:UserControl1 HeightMargin="240"/>
-        
+        <local:UserControlHorizon HeightMargin="270" />
+        <local:UserControlAir/>
+        <local:UserControlScaleRoll/>
     </Grid>
-
 </UserControl>
