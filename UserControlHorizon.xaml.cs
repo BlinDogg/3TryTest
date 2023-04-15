@@ -40,10 +40,10 @@ namespace _3TryTest
         public UserControlHorizon()
         {
             InitializeComponent();
-
+            //0, 370, 540, 340
         }
 
-        
-        
+
+
     }
 }
