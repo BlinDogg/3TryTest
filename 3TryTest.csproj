@@ -61,6 +61,9 @@
     <Compile Include="UserControlHorizon.xaml.cs">
       <DependentUpon>UserControlHorizon.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControlLinearScale.xaml.cs">
+      <DependentUpon>UserControlLinearScale.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControlScaleRoll.xaml.cs">
       <DependentUpon>UserControlScaleRoll.xaml</DependentUpon>
     </Compile>
@@ -84,6 +87,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControlHorizon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlLinearScale.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

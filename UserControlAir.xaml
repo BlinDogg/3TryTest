@@ -6,7 +6,15 @@
              xmlns:local="clr-namespace:_3TryTest"
              mc:Ignorable="d" 
              d:DesignHeight="540" d:DesignWidth="540">
-    <Grid Height="487" Width="446">
+    <Grid Height="487" Width="446" RenderTransformOrigin="0.5,0.5">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="0" x:Name="rotate"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
         <Image Source="Images/5PlaneBlack2.0.png" x:Name="blackImage"/>
         <Image Source="Images/PlanePink2.0.png" Visibility="Hidden" x:Name="pinkImage"/>
     </Grid>

@@ -39,7 +39,7 @@ namespace _3TryTest
             var control = (UserControlHorizon)d;
             var newHeightMargin = (double)e.NewValue;
             control.grid.Margin = new Thickness(0, -newHeightMargin, 0, 0);
-            control.clipRectY.Rect = new Rect(0, newHeightMargin+100, 540, 340);
+            control.clipRectY.Rect = new Rect(0, newHeightMargin-30, 540, 330);
 
         }
 

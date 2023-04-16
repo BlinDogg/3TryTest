@@ -10,7 +10,7 @@
             <EllipseGeometry RadiusY="270" Center="270, 270" RadiusX="270"/>
         </Grid.Clip>
 
-        <Grid HorizontalAlignment="Center" Height="1080" VerticalAlignment="Top" Width="540" Margin="0,-270,0,0" x:Name="grid">
+        <Grid HorizontalAlignment="Center" Height="1620" VerticalAlignment="Top" Width="540" Margin="0,-540,0,0" x:Name="grid">
             
             
             <Grid.RowDefinitions>
@@ -30,9 +30,9 @@
             </Grid.Background>
             <Grid Height="540" Width="540" VerticalAlignment="Center">
                 <Grid.Clip>
-                    <RectangleGeometry Rect="0, 370, 540, 340" x:Name="clipRectY"/>
+                    <RectangleGeometry Rect="0, 510, 540, 330" x:Name="clipRectY"/>
                 </Grid.Clip>
-                <Image Source="Images/linear.png" Margin="100,0,100,-540"/>
+                <Image Source="Images/linear.png" Margin="100,0,100,-645" Height="1020" VerticalAlignment="Bottom"/>
             </Grid>
         </Grid>
         

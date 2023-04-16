@@ -5,9 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_3TryTest" x:Class="_3TryTest.MainWindow"
         mc:Ignorable="d"
-        Title="Тестовый" Height="580" Width="560" FontSize="14">
+        Title="Тестовый" Height="600" Width="860" FontSize="14">
     <Grid>
-        <local:UserControlUnion/>
+        <local:UserControlUnion HorizontalAlignment="Left"/>
+        <Slider HorizontalAlignment="Left" Margin="608,100,0,0" VerticalAlignment="Top" Width="223" Minimum="-180" Maximum="180"/>
+        <Slider HorizontalAlignment="Left" Margin="608,200,0,0" VerticalAlignment="Top" Width="223" Minimum="-90" Maximum="90"/>
+        <Slider HorizontalAlignment="Left" Margin="608,300,0,0" VerticalAlignment="Top" Width="223"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="636,75,0,0" TextWrapping="Wrap" Text="Roll Value" VerticalAlignment="Top" Width="179"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="636,175,0,0" TextWrapping="Wrap" Text="Pitch Value" VerticalAlignment="Top" Width="179"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="636,275,0,0" TextWrapping="Wrap" Text="Drift Value" VerticalAlignment="Top" Width="179"/>
+        <TextBlock HorizontalAlignment="Left" Height="18" Margin="569,418,0,0" TextWrapping="Wrap" Text="Current MaxRoll" VerticalAlignment="Top" Width="111"/>
+        <TextBlock HorizontalAlignment="Left" Height="18" Margin="698,418,0,0" TextWrapping="Wrap" Text="Current MaxPitch" VerticalAlignment="Top" Width="117"/>
+        <TextBlock HorizontalAlignment="Left" Height="18" Margin="698,448,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="96"/>
+        <TextBlock HorizontalAlignment="Left" Height="18" Margin="569,448,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="96"/>
+
 
     </Grid>
 

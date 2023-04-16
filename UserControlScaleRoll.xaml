@@ -8,5 +8,7 @@
              d:DesignHeight="540" d:DesignWidth="540">
     <Grid>
         <Image Source="Images/circle.png"/>
+        
     </Grid>
+    
 </UserControl>

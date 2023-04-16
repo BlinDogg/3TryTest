@@ -7,8 +7,9 @@
              mc:Ignorable="d" 
              d:DesignHeight="540" d:DesignWidth="540">
     <Grid>
-        <local:UserControlHorizon/>
+        <local:UserControlHorizon HeightMargin="{Binding HeightMargin, Mode=TwoWay, RelativeSource={RelativeSource AncestorType={x:Type local:UserControlUnion}}}" />
         <local:UserControlAir/>
         <local:UserControlScaleRoll/>
+        
     </Grid>
 </UserControl>

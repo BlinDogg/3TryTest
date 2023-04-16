@@ -20,17 +20,25 @@ namespace _3TryTest
     /// </summary>
     public partial class UserControlUnion : UserControl
     {
+        public static readonly DependencyProperty HeightMarginProperty =
+         DependencyProperty.Register("HeightMargin", typeof(double), typeof(UserControlUnion), new PropertyMetadata(0d));
+
+        public double HeightMargin
+        {
+            get { return (double)GetValue(HeightMarginProperty); }
+            set { SetValue(HeightMarginProperty, value); }
+        }
+
         
 
         public UserControlUnion()
         {
             InitializeComponent();
-            Loaded += UserControlUnion_Loaded;
-        }
-        private void UserControlUnion_Loaded(object sender, RoutedEventArgs e)
-        {
-            var UserControlHorizon = new UserControlHorizon();
-            UserControlHorizon.HeightMargin = 470; 
+
+            double Pitch = 0;
+
+            double baseMargin = 540;
+            HeightMargin = baseMargin- Pitch * 6;
         }
 
 
