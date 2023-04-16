@@ -23,9 +23,8 @@ namespace _3TryTest
         public MainWindow()
         {
             InitializeComponent();
-            
+
         }
-        
         
     }
 }
