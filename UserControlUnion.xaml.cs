@@ -20,10 +20,19 @@ namespace _3TryTest
     /// </summary>
     public partial class UserControlUnion : UserControl
     {
+        
+
         public UserControlUnion()
         {
             InitializeComponent();
+            Loaded += UserControlUnion_Loaded;
         }
+        private void UserControlUnion_Loaded(object sender, RoutedEventArgs e)
+        {
+            var UserControlHorizon = new UserControlHorizon();
+            UserControlHorizon.HeightMargin = 470; 
+        }
+
 
     }
 }

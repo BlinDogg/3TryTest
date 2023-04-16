@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+
              mc:Ignorable="d">
     <Grid Background="Black" Height="540" Width="540">
         <Grid.Clip>
@@ -29,7 +30,7 @@
             </Grid.Background>
             <Grid Height="540" Width="540" VerticalAlignment="Center">
                 <Grid.Clip>
-                    <RectangleGeometry Rect="0, 370, 540, 340" x:Name="clipRect"/>
+                    <RectangleGeometry Rect="0, 370, 540, 340" x:Name="clipRectY"/>
                 </Grid.Clip>
                 <Image Source="Images/linear.png" Margin="100,0,100,-540"/>
             </Grid>

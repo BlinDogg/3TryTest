@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="540" d:DesignWidth="540">
     <Grid>
-        <local:UserControlHorizon HeightMargin="270" />
+        <local:UserControlHorizon/>
         <local:UserControlAir/>
         <local:UserControlScaleRoll/>
     </Grid>
