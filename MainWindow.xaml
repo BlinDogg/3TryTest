@@ -13,7 +13,7 @@
         </Grid>
         <Slider HorizontalAlignment="Left" Margin="608,100,0,0" VerticalAlignment="Top" Width="223" Minimum="-180" Maximum="180" ValueChanged="OnRollSliderValueChanged"/>
         <Slider HorizontalAlignment="Left" Margin="608,200,0,0" VerticalAlignment="Top" Width="223" Minimum="-90" Maximum="90"  ValueChanged="OnPitchSliderValueChanged" />
-        <Slider HorizontalAlignment="Left" Margin="608,300,0,0" VerticalAlignment="Top" Width="223"/>
+        <Slider HorizontalAlignment="Left" Margin="608,300,0,0" VerticalAlignment="Top" Width="223" Minimum="-80" Maximum="80" ValueChanged="OnDriftSliderValueChanged"/>
         <TextBlock HorizontalAlignment="Left" Height="20" Margin="636,75,0,0" TextWrapping="Wrap" Text="Roll Value" VerticalAlignment="Top" Width="179"/>
         <TextBlock HorizontalAlignment="Left" Height="20" Margin="636,175,0,0" TextWrapping="Wrap" Text="Pitch Value" VerticalAlignment="Top" Width="179"/>
         <TextBlock HorizontalAlignment="Left" Height="20" Margin="636,275,0,0" TextWrapping="Wrap" Text="Drift Value" VerticalAlignment="Top" Width="179"/>

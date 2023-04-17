@@ -59,6 +59,12 @@ namespace _3TryTest
             else myUserControlUnion.alarmBool = false;
         }
 
+        private void OnDriftSliderValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            double driftValue = e.NewValue;
+            myUserControlUnion.DriftMargin = driftValue;
+        }
+
         public MainWindow()
         {
             InitializeComponent();

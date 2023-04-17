@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="540" d:DesignWidth="540">
     <Grid>
-        <Image Source="Images/circle.png"/>
+        <Image Source="Images/HalfCircle.png"/>
         
     </Grid>
     

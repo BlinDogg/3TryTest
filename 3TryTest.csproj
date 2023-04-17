@@ -58,6 +58,9 @@
     <Compile Include="UserControlAir.xaml.cs">
       <DependentUpon>UserControlAir.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControlDrift.xaml.cs">
+      <DependentUpon>UserControlDrift.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControlHorizon.xaml.cs">
       <DependentUpon>UserControlHorizon.xaml</DependentUpon>
     </Compile>
@@ -83,6 +86,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="UserControlAir.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlDrift.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -138,6 +145,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\PlanePink2.0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HalfCircle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -35,7 +35,10 @@ namespace _3TryTest
         public static readonly DependencyProperty alarmBoolProperty =
     DependencyProperty.Register("alarmBool", typeof(bool), typeof(UserControlUnion), new PropertyMetadata(false));
 
-       
+        public static readonly DependencyProperty DriftMarginProperty =
+            DependencyProperty.Register("DriftMargin", typeof(double), typeof(UserControlUnion), new PropertyMetadata(0d));
+
+
         private static void OnRollPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             var control = (UserControlUnion)d;
@@ -76,6 +79,12 @@ namespace _3TryTest
         {
             get { return (bool)GetValue(alarmBoolProperty); }
             set { SetValue(alarmBoolProperty, value); }
+        }
+
+        public double DriftMargin
+        {
+            get { return (double)GetValue(DriftMarginProperty); }
+            set { SetValue(DriftMarginProperty, value); }
         }
 
         public UserControlUnion()

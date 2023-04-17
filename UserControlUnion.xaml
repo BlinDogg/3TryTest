@@ -10,6 +10,7 @@
         <local:UserControlHorizon HeightMargin="{Binding HeightMargin, Mode=TwoWay, RelativeSource={RelativeSource AncestorType={x:Type local:UserControlUnion}}}" />
         <local:UserControlAir Angle="{Binding Angle, Mode=TwoWay, RelativeSource={RelativeSource AncestorType={x:Type local:UserControlUnion}}}" alarmBool="{Binding alarmBool, Mode=TwoWay, RelativeSource={RelativeSource AncestorType={x:Type local:UserControlUnion}}}"/>
         <local:UserControlScaleRoll/>
-        
+        <local:UserControlDrift Margin="0,470,0,0" HorizontalAlignment="Center" DriftMargin="{Binding DriftMargin, Mode=TwoWay, RelativeSource={RelativeSource AncestorType={x:Type local:UserControlUnion}}}"/>
+
     </Grid>
 </UserControl>
