@@ -8,7 +8,7 @@
              d:DesignHeight="540" d:DesignWidth="540">
     <Grid>
         <local:UserControlHorizon HeightMargin="{Binding HeightMargin, Mode=TwoWay, RelativeSource={RelativeSource AncestorType={x:Type local:UserControlUnion}}}" />
-        <local:UserControlAir Angle="{Binding Angle, Mode=TwoWay, RelativeSource={RelativeSource AncestorType={x:Type local:UserControlUnion}}}"/>
+        <local:UserControlAir Angle="{Binding Angle, Mode=TwoWay, RelativeSource={RelativeSource AncestorType={x:Type local:UserControlUnion}}}" alarmBool="{Binding alarmBool, Mode=TwoWay, RelativeSource={RelativeSource AncestorType={x:Type local:UserControlUnion}}}"/>
         <local:UserControlScaleRoll/>
         
     </Grid>

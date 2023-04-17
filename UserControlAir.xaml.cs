@@ -27,10 +27,17 @@ namespace _3TryTest
         private DispatcherTimer timer;
         private bool isPinkVisible = false;
 
-
         public static readonly DependencyProperty AngleProperty =
             DependencyProperty.Register("Angle", typeof(double), typeof(UserControlAir), new PropertyMetadata(0.0, AngleChangedCallback));
 
+        public static readonly DependencyProperty alarmBoolProperty =
+    DependencyProperty.Register("alarmBool", typeof(bool), typeof(UserControlAir), new PropertyMetadata(false, alarmBoolChangedCallback));
+
+        public bool alarmBool
+        {
+            get { return (bool)GetValue(alarmBoolProperty); }
+            set { SetValue(alarmBoolProperty, value); }
+        }
 
         public double Angle
         {
@@ -46,16 +53,33 @@ namespace _3TryTest
 
         }
 
+        private static void alarmBoolChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var control = (UserControlAir)d;
+            var newValue = (bool)e.NewValue;
+
+            if (newValue)
+            {
+                control.timer = new DispatcherTimer();
+                control.timer.Interval = TimeSpan.FromSeconds(0.4);
+                control.timer.Tick += control.OnTimedEvent;
+                control.timer.Start();
+            }
+            else
+            {
+                control.timer.Stop();
+                control.pinkImage.Visibility = Visibility.Hidden;
+                control.blackImage.Visibility = Visibility.Visible;
+            }
+
+        }
+
+
 
         public UserControlAir()
         {
-            InitializeComponent();
-
-            Angle = 0;
-            timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(0.4); //интервал
-            timer.Tick += OnTimedEvent;
-            timer.Start();
+            InitializeComponent();            
+                
         }
 
         private void OnTimedEvent(object sender, EventArgs e)

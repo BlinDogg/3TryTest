@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:_3TryTest" x:Class="_3TryTest.MainWindow"
         mc:Ignorable="d"
         Title="Тестовый" Height="600" Width="860" FontSize="14">
+    <Window.Resources>
+        <local:CacheData x:Key="MyData" />
+    </Window.Resources>
     <Grid>
         <Grid x:Name="MainGrid" Margin="0,0,296,0">
             
@@ -18,14 +21,10 @@
         <TextBlock HorizontalAlignment="Left" Height="20" Margin="636,275,0,0" TextWrapping="Wrap" Text="Drift Value" VerticalAlignment="Top" Width="179"/>
         <TextBlock HorizontalAlignment="Left" Height="18" Margin="569,418,0,0" TextWrapping="Wrap" Text="Current MaxRoll" VerticalAlignment="Top" Width="111"/>
         <TextBlock HorizontalAlignment="Left" Height="18" Margin="698,418,0,0" TextWrapping="Wrap" Text="Current MaxPitch" VerticalAlignment="Top" Width="117"/>
-        <TextBlock HorizontalAlignment="Left" Height="18" Margin="698,448,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="96"/>
-        <TextBlock HorizontalAlignment="Left" Height="18" Margin="569,448,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="96"/>
+        <TextBlock HorizontalAlignment="Left" Height="18" Margin="698,448,0,0" TextWrapping="Wrap" Text="{Binding Source={StaticResource MyData}, Path=currientPitch}" VerticalAlignment="Top" Width="96"/>
+        <TextBlock HorizontalAlignment="Left" Height="18" Margin="569,448,0,0" TextWrapping="Wrap" Text="{Binding Source={StaticResource MyData}, Path=currientRoll}" VerticalAlignment="Top" Width="96"/>
 
 
     </Grid>
-
-
-
-
 
 </Window>

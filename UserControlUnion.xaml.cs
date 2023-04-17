@@ -32,9 +32,10 @@ namespace _3TryTest
         public static readonly DependencyProperty AngleProperty =
             DependencyProperty.Register("Angle", typeof(double), typeof(UserControlUnion), new PropertyMetadata(0d));
 
+        public static readonly DependencyProperty alarmBoolProperty =
+    DependencyProperty.Register("alarmBool", typeof(bool), typeof(UserControlUnion), new PropertyMetadata(false));
 
-
-
+       
         private static void OnRollPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             var control = (UserControlUnion)d;
@@ -69,6 +70,12 @@ namespace _3TryTest
         {
             get { return (double)GetValue(AngleProperty); }
             set { SetValue(AngleProperty, value); }
+        }
+
+        public bool alarmBool
+        {
+            get { return (bool)GetValue(alarmBoolProperty); }
+            set { SetValue(alarmBoolProperty, value); }
         }
 
         public UserControlUnion()
