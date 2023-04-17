@@ -20,10 +20,12 @@ namespace _3TryTest
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
-
+            UserControlUnion myUserControlUnion = new UserControlUnion();
+            myUserControlUnion.Pitch = PitchSlider.Value;
         }
         
     }

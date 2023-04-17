@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="Тестовый" Height="600" Width="860" FontSize="14">
     <Grid>
-        <local:UserControlUnion HorizontalAlignment="Left"/>
+        <local:UserControlUnion HorizontalAlignment="Left" x:Name="myUserControlUnion"/>
         <Slider HorizontalAlignment="Left" Margin="608,100,0,0" VerticalAlignment="Top" Width="223" Minimum="-180" Maximum="180"/>
-        <Slider HorizontalAlignment="Left" Margin="608,200,0,0" VerticalAlignment="Top" Width="223" Minimum="-90" Maximum="90"/>
+        <Slider HorizontalAlignment="Left" Margin="608,200,0,0" VerticalAlignment="Top" Width="223" Minimum="-90" Maximum="90"  x:Name="PitchSlider"/>
         <Slider HorizontalAlignment="Left" Margin="608,300,0,0" VerticalAlignment="Top" Width="223"/>
         <TextBlock HorizontalAlignment="Left" Height="20" Margin="636,75,0,0" TextWrapping="Wrap" Text="Roll Value" VerticalAlignment="Top" Width="179"/>
         <TextBlock HorizontalAlignment="Left" Height="20" Margin="636,175,0,0" TextWrapping="Wrap" Text="Pitch Value" VerticalAlignment="Top" Width="179"/>

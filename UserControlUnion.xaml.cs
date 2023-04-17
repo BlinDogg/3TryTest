@@ -23,7 +23,10 @@ namespace _3TryTest
         public static readonly DependencyProperty HeightMarginProperty =
          DependencyProperty.Register("HeightMargin", typeof(double), typeof(UserControlUnion), new PropertyMetadata(0d));
         public static readonly DependencyProperty PitchProperty =
-         DependencyProperty.Register("Pitch", typeof(double), typeof(UserControlUnion), new PropertyMetadata(0d));
+        DependencyProperty.Register("Pitch", typeof(double), typeof(UserControlUnion), new PropertyMetadata(0.0));
+
+
+        
 
         public double Pitch
         {
@@ -44,10 +47,12 @@ namespace _3TryTest
         {
             InitializeComponent();
 
-            Pitch = 10;
+            //Pitch = 10;
+
 
             double baseMargin = 540;
             HeightMargin = baseMargin- Pitch * 6;
+
         }
 
 
