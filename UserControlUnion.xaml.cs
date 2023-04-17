@@ -26,17 +26,7 @@ namespace _3TryTest
         DependencyProperty.Register("Pitch", typeof(double), typeof(UserControlUnion), new PropertyMetadata(0.0));
 
 
-        public void SubscribeToPitchValueChangedEvent(MainWindow mainWindow)
-        {
-            mainWindow.PitchValueChanged += MainWindow_PitchValueChanged;
-        }
-
-        private void MainWindow_PitchValueChanged(object sender, double pitchValue)
-        {
-            // Изменяем значение переменной в UserControl
-            // ...
-            Pitch = pitchValue;
-        }
+        
 
         public double Pitch
         {
@@ -58,7 +48,6 @@ namespace _3TryTest
             InitializeComponent();
 
             //Pitch = 10;
-            SubscribeToPitchValueChangedEvent((MainWindow)Window.GetWindow(this));
 
             double baseMargin = 540;
             HeightMargin = baseMargin- Pitch * 6;

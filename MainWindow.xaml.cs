@@ -20,12 +20,12 @@ namespace _3TryTest
     /// </summary>
     public partial class MainWindow : Window
     {
-        public event EventHandler<double> PitchValueChanged;
+
 
         private void OnPitchSliderValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             double pitchValue = e.NewValue;
-            PitchValueChanged?.Invoke(this, pitchValue);
+            
         }
 
         public MainWindow()
