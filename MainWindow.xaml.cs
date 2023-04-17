@@ -21,18 +21,25 @@ namespace _3TryTest
     public partial class MainWindow : Window
     {
 
+        private UserControlUnion myUserControlUnion;
 
         private void OnPitchSliderValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             double pitchValue = e.NewValue;
-            
+            myUserControlUnion.Pitch = pitchValue;
+        }
+        private void OnRollSliderValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            double rollValue = e.NewValue;
+            myUserControlUnion.Roll = rollValue;
         }
 
         public MainWindow()
         {
             InitializeComponent();
-            
+            myUserControlUnion = new UserControlUnion();
+            MainGrid.Children.Add(myUserControlUnion);
+
         }
-        
     }
 }
