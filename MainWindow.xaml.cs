@@ -20,39 +20,41 @@ namespace _3TryTest
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
     /// 
-
     public partial class MainWindow : Window
     {
-        public class CacheData
-        {
-            public double currentRoll { get; set; } = 0;
-            public double maxRoll { get; set; } = 40;
-            public double currentPitch{ get; set; } = 0;
-            public double maxPitch { get; set; } = 30;
-        }
+
+        public static double maxPitch { get; set; } = 30;
+        public static double maxRoll { get; set; } = 40;
+
+
+        public double currentRoll { get; set; } = 0;
+        public double currentPitch{ get; set; } = 0;
+
+
+        public string maxPitchStr { get; set; } = Convert.ToString(maxPitch);
+        public string maxRollStr { get; set; } = Convert.ToString(maxRoll);
 
         private UserControlUnion myUserControlUnion;
-        private CacheData cache = new CacheData();
 
         private void OnPitchSliderValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             double pitchValue = e.NewValue;
             myUserControlUnion.Pitch = pitchValue;
-            cache.currentPitch = pitchValue;
+            currentPitch = pitchValue;
             checkAlarm();
         }
         private void OnRollSliderValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             double rollValue = e.NewValue;
             myUserControlUnion.Roll = rollValue;
-            cache.currentRoll = rollValue;
+            currentRoll = rollValue;
             checkAlarm();
         }
 
         private void checkAlarm()
         {
-            if (cache.currentRoll >= cache.maxRoll || cache.currentPitch >= cache.maxPitch ||
-                cache.currentRoll <= -cache.maxRoll || cache.currentPitch <= -cache.maxPitch) 
+            if (currentRoll >= maxRoll || currentPitch >= maxPitch ||
+                currentRoll <= -maxRoll || currentPitch <= -maxPitch) 
                 myUserControlUnion.alarmBool = true;
             else myUserControlUnion.alarmBool = false;
         }
@@ -62,8 +64,8 @@ namespace _3TryTest
             InitializeComponent();
             myUserControlUnion = new UserControlUnion();
             MainGrid.Children.Add(myUserControlUnion);
-            
 
+            DataContext = this;
         }
     }
 }
