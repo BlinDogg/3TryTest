@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,36 +22,44 @@ namespace _3TryTest
 
         public class LineViewModel
         {
-            public int Y1 { get; set; }
-            public int Y2 { get; set; }
-            public int X1 { get; set; }
-            public int X2 { get; set; }
-        }
-        public class DegreeNumberViewModel
-        {
+            public int Y11 { get; set; }
+            public int Y12 { get; set; }
             public string Text { get; set; }
         }
 
+       
+
         public ObservableCollection<LineViewModel> Lines { get; set; }
-        public ObservableCollection<DegreeNumberViewModel> DegreeNumbers { get; set; }
+        //public ObservableCollection<DegreeNumberViewModel> DegreeNumbers { get; set; }
 
         public UserControlLinearScale()
         {
             InitializeComponent();
-            DegreeNumbers = new ObservableCollection<DegreeNumberViewModel>();
+            //DegreeNumbers = new ObservableCollection<DegreeNumberViewModel>();
             Lines = new ObservableCollection<LineViewModel>();
-            for (int i = 0; i <= 36; i++)
+            for (int i = 170; i >= 0; i-=10)
             {
-                if (i % 2 == 1) Lines.Add(new LineViewModel { Y1 = 28, Y2 = 28, X1 = 250, X2 = 290 });
-                else
+                int degreeCounter = i - 80;
+                if (degreeCounter < 0)
                 {
-                    Lines.Add(new LineViewModel { Y1 = 28, Y2 = 28, X1 = 210, X2 = 250 });
-                    DegreeNumbers.Add(new DegreeNumberViewModel {Text = "10"});
-                    Lines.Add(new LineViewModel { Y1 = -2, Y2 = -2, X1 = 290, X2 = 330 });
+                    degreeCounter = -degreeCounter;
+                    string degree = degreeCounter.ToString();
+                    Lines.Add(new LineViewModel { Y11 = 58, Y12 = 58, Text = degree });
                 }
                     
-            }
+                else if (degreeCounter == 0) Lines.Add(new LineViewModel { Y11 = 58, Y12 = 58, Text = "" });
+                else
+                {
+                    string degree = degreeCounter.ToString();
+                    Lines.Add(new LineViewModel { Y11 = 58, Y12 = 58, Text = degree });
+                }
+                
 
+                
+                
+                    
+            }
+            
             DataContext = this;
         }
     }
