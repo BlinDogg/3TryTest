@@ -22,8 +22,8 @@ namespace _3TryTest
     {
         public static readonly DependencyProperty HeightMarginProperty =
             DependencyProperty.Register("HeightMargin", typeof(double), typeof(UserControlHorizon), new PropertyMetadata(0.0, HeightMarginChangedCallback));
-        
 
+        private const int PixelMargin = 30;
     
 
         public double HeightMargin
@@ -39,7 +39,7 @@ namespace _3TryTest
             var control = (UserControlHorizon)d;
             var newHeightMargin = (double)e.NewValue;
             control.grid.Margin = new Thickness(0, -newHeightMargin, 0, 0);
-            control.clipRectY.Rect = new Rect(0, newHeightMargin-30, 540, 330);
+            control.clipRectY.Rect = new Rect(0, newHeightMargin - PixelMargin, 540, 330);
 
         }
 

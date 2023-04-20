@@ -5,14 +5,20 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:_3TryTest"
              mc:Ignorable="d" 
-             d:DesignHeight="1020" d:DesignWidth="540">
-    <Grid>
-        <ItemsControl ItemsSource="{Binding Lines}">
+             d:DesignHeight="1140" d:DesignWidth="540">
+    <Grid Height="1140">
+        <ItemsControl ItemsSource="{Binding Lines}" Margin="0,2" >
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <Line X1="250" Y1="{Binding Y1}" X2="290" Y2="{Binding Y2}" Stroke="White" StrokeThickness="3"/>
+                    <Grid>
+                        <Line X1="{Binding X1}" X2="{Binding X2}" Y1="{Binding Y1}" Y2="{Binding Y2}" Stroke="Blue" StrokeThickness="4" VerticalAlignment="Center"/>
+                        
+                    </Grid>
+                    
+                    
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
+        <Line X1="0" Y1="570" X2="540" Y2="570" Stroke="Blue" StrokeThickness="2"/>
     </Grid>
 </UserControl>

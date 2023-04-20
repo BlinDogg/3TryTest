@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-
+             xmlns:local="clr-namespace:_3TryTest"
              mc:Ignorable="d">
     <Grid Background="Black" Height="540" Width="540">
         <Grid.Clip>
@@ -11,16 +11,16 @@
         </Grid.Clip>
 
         <Grid HorizontalAlignment="Center" Height="1620" VerticalAlignment="Top" Width="540" Margin="0,-540,0,0" x:Name="grid">
-            
-            
+
+
             <Grid.RowDefinitions>
                 <RowDefinition Height="50*" />
                 <RowDefinition Height="50*" />
             </Grid.RowDefinitions>
-            
-            
+
+
             <Grid.Background>
-                
+
                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                     <GradientStop Color="#87CEEB" Offset="0"/>
                     <GradientStop Color="#87CEEB" Offset="0.5"/>
@@ -32,10 +32,10 @@
                 <Grid.Clip>
                     <RectangleGeometry Rect="0, 510, 540, 330" x:Name="clipRectY"/>
                 </Grid.Clip>
-                <Image Source="Images/linear.png" Margin="100,0,100,-645" Height="1020" VerticalAlignment="Bottom"/>
+                <!--<Image Source="Images/linear.png" Margin="100,0,100,-645" Height="1020" VerticalAlignment="Bottom"/>-->
+                <local:UserControlLinearScale Height="1140" Margin="0,105,0,-805" VerticalAlignment="Top"/>
             </Grid>
         </Grid>
-        
 
     </Grid>
 
